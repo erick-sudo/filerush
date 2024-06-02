@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.compose.filerush.ui.home.Home
 
 @Composable
 fun FilerushNavHost(
@@ -21,7 +22,7 @@ fun FilerushNavHost(
         composable(
             route = FilerushRoutes.Home.route
         ) {
-
+            Home()
         }
     }
 }

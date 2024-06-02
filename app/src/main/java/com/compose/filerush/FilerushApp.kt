@@ -30,6 +30,7 @@ fun FilerushApp(
     mainViewModel: MainViewModel = viewModel()
 ) {
 
+    // Navigation controller
     val filerushNavController = rememberFilerushNavController()
 
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
@@ -74,8 +75,8 @@ fun FilerushApp(
                     bottomBar = {
                         FilerushBottomBar(
                             tabs = FilerushTabs.entries.toTypedArray(),
-                            currentRoute = "home",
-                            navigateToRoute = {  }
+                            currentRoute = filerushNavController.currentRoute?: "home",
+                            navigateToRoute = {  },
                         )
                     }
                 ) { paddingValues ->

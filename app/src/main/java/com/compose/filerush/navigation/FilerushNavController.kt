@@ -2,6 +2,8 @@ package com.compose.filerush.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.NavBackStackEntry
@@ -28,8 +30,7 @@ class FilerushNavController(
     val navController: NavHostController
 ) {
     // Navigation source of truth
-    private val currentRoute: String?
-        get() = navController.currentDestination?.route
+    val currentRoute: String? by mutableStateOf(navController.currentDestination?.route)
 
     fun navigateTo(route: String) {
         if(route != currentRoute) {
