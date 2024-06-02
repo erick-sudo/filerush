@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Filerush</string>
+
+    <string name="tab_home">Home</string>
+    <string name="tab_history">Download History</string>
+    <string name="tab_network">Network analysis</string>
+    <string name="tab_settings">Preferences and Settings</string>
+
+    <string name="add_download">New Download</string>
 </resources>
